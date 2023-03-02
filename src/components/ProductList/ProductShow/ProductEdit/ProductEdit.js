@@ -7,6 +7,21 @@ const ProductEdit = ({ product, onSubmit }) => {
   const [price, setPrice] = useState(product.price);
   const [category, setCategory] = useState(product.category);
   const [image, setImage] = useState(product.image);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    onSubmit();
+    editProductById(
+      product.id,
+      product.date,
+      title,
+      category,
+      price,
+      description,
+      image
+    );
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       <label>
