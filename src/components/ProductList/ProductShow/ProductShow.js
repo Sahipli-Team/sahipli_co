@@ -15,6 +15,10 @@ const ProductShow = ({ product }) => {
   const handleSubmit = () => {
     setShowEdit(false);
   };
+  const handleDeleteClick = () => {
+    deleteProductById(product.id);
+  };
+
   let content = (
     <div>
       <p>Category: {category}</p>
@@ -33,9 +37,9 @@ const ProductShow = ({ product }) => {
   return (
     <>
       <div>
-        <button>
+        <butto onClick={handleDeleteClick}>
           <img src={DeleteImageButton} alt="Delete Image Button" />
-        </button>
+        </butto>
         <button>
           <img
             src={EditImageButton}
