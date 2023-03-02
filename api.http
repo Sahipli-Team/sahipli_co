@@ -13,3 +13,16 @@ Content-Type: application/json
     "description": "30k KM Garaj aracı",
     "image": "https://cdn.motor1.com/images/mgl/nOZPj/s1/4x3/bmw-i4.webp"
 }
+
+###
+PUT http://localhost:3001/products/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "date": "2/3/2023",
+    "title": "BMW",
+    "category": "Araba",
+    "price": "3250000",
+    "description": "90k KM Garaj aracı",
+    "image": "https://cdn.motor1.com/images/mgl/nOZPj/s1/4x3/bmw-i4.webp"
+}

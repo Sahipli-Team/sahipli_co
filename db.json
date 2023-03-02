@@ -1,11 +1,11 @@
 {
   "products": [
     {
-      "date": "28/2/2023",
-      "title": "İlk Sahibinden BMW",
+      "date": "2/3/2023",
+      "title": "BMW",
       "category": "Araba",
-      "price": "1250000",
-      "description": "30k KM Garaj aracı",
+      "price": "3250000",
+      "description": "90k KM Garaj aracı",
       "image": "https://cdn.motor1.com/images/mgl/nOZPj/s1/4x3/bmw-i4.webp",
       "id": 1
     },
