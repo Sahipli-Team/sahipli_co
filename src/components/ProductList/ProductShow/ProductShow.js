@@ -12,7 +12,24 @@ const ProductShow = ({ product }) => {
   const handleEditClick = () => {
     setShowEdit((p) => !p);
   };
-
+  const handleSubmit = () => {
+    setShowEdit(false);
+  };
+  let content = (
+    <div>
+      <p>Category: {category}</p>
+      <p>Title: {title}</p>
+      <img src={image} alt={title} />
+      <div>
+        <p>Price: ${price}</p>
+        <p>Advert Date: {date}</p>
+      </div>
+      <p>Description: {description}</p>
+    </div>
+  );
+  if (showEdit) {
+    content = <ProductEdit onSubmit={handleSubmit} product={product} />;
+  }
   return (
     <>
       <div>
@@ -27,6 +44,7 @@ const ProductShow = ({ product }) => {
           />
         </button>
       </div>
+      {content}
     </>
   );
 };
