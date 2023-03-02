@@ -26,3 +26,7 @@ Content-Type: application/json
     "description": "90k KM Garaj aracı",
     "image": "https://cdn.motor1.com/images/mgl/nOZPj/s1/4x3/bmw-i4.webp"
 }
+
+###
+DELETE http://localhost:3001/products/2 HTTP/1.1
+Content-Type: application/json
