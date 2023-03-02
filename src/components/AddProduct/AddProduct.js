@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 
 const AddProduct = () => {
+ 
+  const [title, setTitle] = useState();
+  const [date, setDate] = useState();
+  const [description, setDescription] = useState();
+  const [price, setPrice] = useState();
+  const [category, setCategory] = useState();
+  const [image, setImage] = useState();
   const [click, setClick] = useState(false);
   const [vis, setVis] = useState("none");
   useEffect(() => {
