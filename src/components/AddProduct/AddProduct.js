@@ -13,7 +13,6 @@ const AddProduct = () => {
   const [vis, setVis] = useState("none");
 
   const handleSubmit = (e) => {
-
     e.preventDefault()
     const today = new Date();
     const todayDate = `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`
@@ -54,23 +53,23 @@ const AddProduct = () => {
       <form style={{ display: vis }} onSubmit={handleSubmit}>
         <label>
           İlan Başlığı:
-          <input placeholder="İlan Başlığı" type="text"></input>
+          <input placeholder="İlan Başlığı" value={title} onChange={(e) => setTitle(e.target.value)}></input>
         </label>
         <label>
           Kategori:
-          <input placeholder="Kategori Giriniz"></input>
+          <input placeholder="Kategori Giriniz" value={category} onChange={(e) => setCategory(e.target.value)}></input>
         </label>
         <label>
           Fiyat:
-          <input placeholder="Fiyat Giriniz"></input>
+          <input placeholder="Fiyat Giriniz" value={price} onChange={(e) => setPrice(e.target.value)}></input>
         </label>
         <label>
           Açıklama:
-          <input placeholder="Açıklama Giriniz"></input>
+          <input placeholder="Açıklama Giriniz" value={description} onChange={(e) => setDescription(e.target.value)}></input>
         </label>
         <label>
           Görsel URL:
-          <input placeholder="Resim URL'i Giriniz"></input>
+          <input placeholder="Resim URL'i Giriniz" value={image} onChange={(e) => setImage(e.target.value)}></input>
         </label>
         <div>
           <button>Kaydet</button>
