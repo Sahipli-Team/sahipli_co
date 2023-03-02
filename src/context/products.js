@@ -30,10 +30,20 @@ function Provider({ children }) {
     const updatedProducts = [...products, response.data];
     setProducts(updatedProducts);
   };
+
+  const deleteProductById = async (id) => {
+    await axios.delete(`http://localhost:3001/products/${id}`);
+    const updatedProducts = products.filter((product) => {
+      return product.id !== id;
+    });
+    setProducts(updatedProducts);
+  };
+
   const valueToShare = {
     products,
     fetchProducts,
     createProduct,
+    deleteProductById,
   };
   return (
     <ProductContext.Provider value={valueToShare}>
