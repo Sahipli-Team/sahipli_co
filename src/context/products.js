@@ -11,6 +11,32 @@ function Provider({ children }) {
     setProducts(response.data);
   };
 
+  const editProductById = async (
+    id,
+    date,
+    newTitle,
+    newCategory,
+    newPrice,
+    newDescription,
+    newImage
+  ) => {
+    const response = await axios.put(`http://localhost:3001/products/${id}`, {
+      date,
+      title: newTitle,
+      category: newCategory,
+      price: newPrice,
+      description: newDescription,
+      image: newImage,
+    });
+    const updatedProducts = products.map((product) => {
+      if (product.id === id) {
+        return { ...product, ...response.data };
+      }
+      return product;
+    });
+    setProducts(updatedProducts);
+  };
+
   const createProduct = async (
     date,
     title,
@@ -44,6 +70,7 @@ function Provider({ children }) {
     fetchProducts,
     createProduct,
     deleteProductById,
+    editProductById,
   };
   return (
     <ProductContext.Provider value={valueToShare}>
