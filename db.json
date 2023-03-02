@@ -8,15 +8,6 @@
       "description": "90k KM Garaj aracı",
       "image": "https://cdn.motor1.com/images/mgl/nOZPj/s1/4x3/bmw-i4.webp",
       "id": 1
-    },
-    {
-      "date": "28/2/2023",
-      "title": "İlk Sahibinden BMW",
-      "category": "Araba",
-      "price": "1250000",
-      "description": "30k KM Garaj aracı",
-      "image": "https://cdn.motor1.com/images/mgl/nOZPj/s1/4x3/bmw-i4.webp",
-      "id": 3
     }
   ]
 }
