@@ -93,19 +93,23 @@ const AddProduct = () => {
         <br />
         <label>
           Description:
-          <input
+          <textarea
+            style={{ textAlign: "left" }}
             placeholder="Add Description"
             value={description}
+            name={description}
+            rows="12"
+            cols="43"
             onChange={(e) => setDescription(e.target.value)}
-          ></input>
+          ></textarea>
         </label>
         <br />
         <div>
           <br />
-          <button>Kaydet</button>
+          <button>Save</button>
         </div>
       </form>
-      <button onClick={handleClick}>İlan Ekle</button>
+      <button onClick={handleClick}>Add Product</button>
     </div>
   );
 };
