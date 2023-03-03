@@ -180,3 +180,17 @@ p {
 .wrapper p {
   margin-bottom: 0.5rem;
 }
+
+.addForm{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position:fixed;
+  justify-items: center;
+  top: 25%;
+  bottom: 25%;
+  left: 25%;  
+  right: 25%;
+  margin: auto;
+  background-color: rgba(0,0,0, 0.7);
+}
