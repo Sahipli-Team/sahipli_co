@@ -91,15 +91,13 @@ const AddProduct = () => {
         </label>
         <br />
         <br />
+
         <label>
           Description:
           <textarea
-            style={{ textAlign: "left" }}
             placeholder="Add Description"
             value={description}
             name={description}
-            rows="12"
-            cols="43"
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </label>
