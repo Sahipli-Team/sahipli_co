@@ -1,10 +1,14 @@
-import Image from "../../Image/Slogo.png"
+import Image from "../../Image/Slogo.png";
 
 const Header = () => {
   return (
-    <div className="Header">
-      <img style={{width: "1.3rem"}} src={Image} alt="S title" />ahipli.com
+    <div className="header">
+      <img
+        style={{ width: "200px", height: "100px" }}
+        src={Image}
+        alt="S title"
+      />
     </div>
-  )
-}
-export default Header
+  );
+};
+export default Header;
