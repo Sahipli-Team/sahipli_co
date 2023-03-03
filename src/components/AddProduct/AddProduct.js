@@ -50,7 +50,7 @@ const AddProduct = () => {
         style={{ display: vis }}
         onSubmit={handleSubmit}
       >
-        <label>
+        <label className="addLabel">
           İlan Başlığı:
           <input
             placeholder="İlan Başlığı"
@@ -58,6 +58,7 @@ const AddProduct = () => {
             onChange={(e) => setTitle(e.target.value)}
           ></input>
         </label>
+        <br />
         <label>
           Kategori:
           <input
@@ -66,6 +67,7 @@ const AddProduct = () => {
             onChange={(e) => setCategory(e.target.value)}
           ></input>
         </label>
+        <br />
         <label>
           Fiyat:
           <input
@@ -74,14 +76,7 @@ const AddProduct = () => {
             onChange={(e) => setPrice(e.target.value)}
           ></input>
         </label>
-        <label>
-          Açıklama:
-          <input
-            placeholder="Açıklama Giriniz"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          ></input>
-        </label>
+        <br />
         <label>
           Görsel URL:
           <input
@@ -90,6 +85,16 @@ const AddProduct = () => {
             onChange={(e) => setImage(e.target.value)}
           ></input>
         </label>
+        <br />
+        <label>
+          Açıklama:
+          <input
+            placeholder="Açıklama Giriniz"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          ></input>
+        </label>
+
         <div>
           <button>Kaydet</button>
         </div>
