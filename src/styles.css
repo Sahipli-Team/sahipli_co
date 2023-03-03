@@ -28,8 +28,8 @@
   filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content:center;
+  align-items: center;
   text-align: center;
   height: 40rem;
   width: 40rem;
@@ -78,6 +78,10 @@ p {
 
 .button-wrapper{
   margin-top: 0px;
+  place-content: end;
+  position: absolute;
+  margin-left: 32rem;
+  top: 0.7rem;
 }
 
 .btn {
