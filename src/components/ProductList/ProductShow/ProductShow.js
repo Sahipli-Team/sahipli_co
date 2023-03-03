@@ -20,10 +20,10 @@ const ProductShow = ({ product }) => {
   };
 
   let content = (
-    <div>
+    <div className="wrapper">
       <p>Category: {category}</p>
       <p>Title: {title}</p>
-      <img src={image} alt={title} />
+      <img className="banner-image" src={image} alt={title} />
       <div>
         <p>Price: ${price}</p>
         <p>Advert Date: {date}</p>
@@ -35,13 +35,18 @@ const ProductShow = ({ product }) => {
     content = <ProductEdit onSubmit={handleSubmit} product={product} />;
   }
   return (
-    <>
-      <div>
-        <butto onClick={handleDeleteClick}>
-          <img src={DeleteImageButton} alt="Delete Image Button" />
-        </butto>
-        <button>
+    <div className="container">
+      <div className="button-wrapper">
+        <button className="btn outline" onClick={handleDeleteClick}>
           <img
+            className="buttonImg"
+            src={DeleteImageButton}
+            alt="Delete Image Button"
+          />
+        </button>
+        <button className="btn fill">
+          <img
+            className="buttonImg"
             src={EditImageButton}
             alt="Edit Image Button"
             onClick={handleEditClick}
@@ -49,7 +54,7 @@ const ProductShow = ({ product }) => {
         </button>
       </div>
       {content}
-    </>
+    </div>
   );
 };
 export default ProductShow;
