@@ -51,7 +51,7 @@ const AddProduct = () => {
         onSubmit={handleSubmit}
       >
         <label className="addLabel">
-          İlan Başlığı:
+          Title:
           <input
             placeholder="İlan Başlığı"
             value={title}
@@ -59,43 +59,49 @@ const AddProduct = () => {
           ></input>
         </label>
         <br />
+        <br />
+
         <label>
-          Kategori:
+          Category:
           <input
-            placeholder="Kategori Giriniz"
+            placeholder="Add Category"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           ></input>
         </label>
         <br />
+        <br />
         <label>
-          Fiyat:
+          Price:
           <input
-            placeholder="Fiyat Giriniz"
+            placeholder="Add Price"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           ></input>
         </label>
         <br />
+        <br />
         <label>
-          Görsel URL:
+          Image URL:
           <input
-            placeholder="Resim URL'i Giriniz"
+            placeholder="Add Image URL"
             value={image}
             onChange={(e) => setImage(e.target.value)}
           ></input>
         </label>
         <br />
+        <br />
         <label>
-          Açıklama:
+          Description:
           <input
-            placeholder="Açıklama Giriniz"
+            placeholder="Add Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           ></input>
         </label>
-
+        <br />
         <div>
+          <br />
           <button>Kaydet</button>
         </div>
       </form>

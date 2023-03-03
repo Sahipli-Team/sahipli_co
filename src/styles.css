@@ -181,35 +181,34 @@ p {
   margin-bottom: 0.5rem;
 }
 
-.addForm{
+.addForm {
   color: white;
   display: flex;
   flex-direction: column;
   background-color: white;
-  position:fixed;
+  position: fixed;
   justify-items: center;
   top: 25%;
   bottom: 25%;
-  left: 25%;  
+  left: 25%;
   right: 25%;
   margin: auto;
-  background-color: rgba(0,0,0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   width: 25%;
   text-align: left;
-  padding: 1% ;
-  padding-top : 2%;
+  padding: 1%;
+  padding-top: 2%;
   border-radius: 4%;
-  
 }
 
-.addLabel{
+.addLabel {
   top: 3%;
   gap: 200px;
 }
 
-
-.addForm label input{
+.addForm label input {
   width: 70%;
-  position: absolute; 
+  position: absolute;
+  text-align: left;
   right: 3%;
 }
