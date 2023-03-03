@@ -37,19 +37,19 @@ const ProductShow = ({ product }) => {
   return (
     <div className="container">
       <div className="button-wrapper">
-        <button className="btn outline" onClick={handleDeleteClick}>
-          <img
-            className="buttonImg"
-            src={DeleteImageButton}
-            alt="Delete Image Button"
-          />
-        </button>
         <button className="btn fill">
           <img
             className="buttonImg"
             src={EditImageButton}
             alt="Edit Image Button"
             onClick={handleEditClick}
+          />
+        </button>
+        <button className="btn outline" onClick={handleDeleteClick}>
+          <img
+            className="buttonImg"
+            src={DeleteImageButton}
+            alt="Delete Image Button"
           />
         </button>
       </div>
