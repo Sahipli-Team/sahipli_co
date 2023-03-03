@@ -105,6 +105,7 @@ const AddProduct = () => {
         <div>
           <br />
           <button className="save_button">Save</button>
+          <button className="close_button">Close</button>
         </div>
       </form>
       <button onClick={handleClick}>Add Product</button>

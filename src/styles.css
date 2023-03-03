@@ -247,7 +247,7 @@ textarea:hover {
   width: 5rem;
   height: 2.5rem;
   border-radius: 12%;
-
+  margin-right: 2%;
   background: transparent;
   color: rgba(255, 255, 255, 0.95);
   filter: drop-shadow(0);
@@ -258,6 +258,27 @@ textarea:hover {
 
 .save_button:hover {
   background: green;
+  transform: scale(1.125);
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+  transition: all 0.3s ease;
+  border-color: whitesmoke;
+}
+
+.close_button {
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 12%;
+  margin-left: 2%;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.95);
+  filter: drop-shadow(0);
+  border: 1px solid rgba(0, 212, 255, 0.9);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.close_button:hover {
+  background: red;
   transform: scale(1.125);
   filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
   transition: all 0.3s ease;
