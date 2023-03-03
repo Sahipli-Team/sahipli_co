@@ -6,15 +6,14 @@
   text-align: center;
 }
 
-body{
-  background: linear-gradient(45deg, #bdc3c7 30%, #2c3e50 100%); 
+body {
+  background: linear-gradient(45deg, #bdc3c7 30%, #2c3e50 100%);
 }
-
 
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: #fcf798;
+  background-color: transparent;
   align-items: center;
   padding: 0 15px;
   margin-bottom: 3rem;
