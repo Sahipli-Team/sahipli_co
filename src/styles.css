@@ -211,4 +211,14 @@ p {
   position: absolute;
   text-align: left;
   right: 3%;
+  background-color: #ffffffcc;
+  color: black;
+  border-radius: 4%;
+}
+
+textarea {
+  background-color: #ffffffcc;
+  border-style: none;
+  color: black;
+  border-radius: 3%;
 }

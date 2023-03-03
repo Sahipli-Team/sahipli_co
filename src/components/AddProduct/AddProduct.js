@@ -53,7 +53,7 @@ const AddProduct = () => {
         <label className="addLabel">
           Title:
           <input
-            placeholder="İlan Başlığı"
+            placeholder="Add Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           ></input>
