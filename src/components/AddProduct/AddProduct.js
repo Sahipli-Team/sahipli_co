@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import ProductContext from "../../context/products";
 
 const AddProduct = () => {
-  const { createProduct } = useContext(ProductContext)
+  const { createProduct } = useContext(ProductContext);
   const [title, setTitle] = useState();
   const [date, setDate] = useState();
   const [description, setDescription] = useState();
@@ -13,25 +13,20 @@ const AddProduct = () => {
   const [vis, setVis] = useState("none");
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const today = new Date();
-    const todayDate = `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`
-    setDate(todayDate)
-    setClick(false)
-    createProduct(
-      date,
-      title,
-      category,
-      price,
-      description,
-      image
-    ) 
-    setTitle('')
-    setDescription('') 
-    setPrice('')  
-    setCategory('')
-    setImage('')
-}
+    const todayDate = `${today.getDate()}/${
+      today.getMonth() + 1
+    }/${today.getFullYear()}`;
+    setDate(todayDate);
+    setClick(false);
+    createProduct(date, title, category, price, description, image);
+    setTitle("");
+    setDescription("");
+    setPrice("");
+    setCategory("");
+    setImage("");
+  };
 
   useEffect(() => {
     if (click) {
@@ -50,26 +45,50 @@ const AddProduct = () => {
 
   return (
     <div>
-      <form style={{ display: vis }} onSubmit={handleSubmit}>
+      <form
+        className="addForm"
+        style={{ display: vis }}
+        onSubmit={handleSubmit}
+      >
         <label>
           İlan Başlığı:
-          <input placeholder="İlan Başlığı" value={title} onChange={(e) => setTitle(e.target.value)}></input>
+          <input
+            placeholder="İlan Başlığı"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          ></input>
         </label>
         <label>
           Kategori:
-          <input placeholder="Kategori Giriniz" value={category} onChange={(e) => setCategory(e.target.value)}></input>
+          <input
+            placeholder="Kategori Giriniz"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          ></input>
         </label>
         <label>
           Fiyat:
-          <input placeholder="Fiyat Giriniz" value={price} onChange={(e) => setPrice(e.target.value)}></input>
+          <input
+            placeholder="Fiyat Giriniz"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+          ></input>
         </label>
         <label>
           Açıklama:
-          <input placeholder="Açıklama Giriniz" value={description} onChange={(e) => setDescription(e.target.value)}></input>
+          <input
+            placeholder="Açıklama Giriniz"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          ></input>
         </label>
         <label>
           Görsel URL:
-          <input placeholder="Resim URL'i Giriniz" value={image} onChange={(e) => setImage(e.target.value)}></input>
+          <input
+            placeholder="Resim URL'i Giriniz"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+          ></input>
         </label>
         <div>
           <button>Kaydet</button>
