@@ -1,5 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import ProductContext from "../../context/products";
+import addButton from "../../Image/add-product.png"
 
 const AddProduct = () => {
   const { createProduct } = useContext(ProductContext);
@@ -115,7 +116,7 @@ const AddProduct = () => {
           <button className="close_button" onClick={handleClick}>Close</button>
         </div>
       </form>
-      <button onClick={handleClick}>Add Product</button>
+      <button className="addProduct" onClick={handleClick}><img src={addButton} alt="add button" />ADD</button>
     </div>
   );
 };
