@@ -3,7 +3,10 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  text-align: center;
 }
+
+
 
 .header {
   display: flex;
@@ -11,6 +14,7 @@
   background-color: #fcf798;
   align-items: center;
   padding: 0 15px;
+  margin-bottom: 3rem;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
@@ -32,6 +36,7 @@
   text-align: center;
   height: 40rem;
   width: 30rem;
+  margin: 1rem 1rem;
 }
 
 .buttonImg {
