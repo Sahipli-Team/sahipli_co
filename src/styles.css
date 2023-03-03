@@ -1,7 +1,14 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fcf798;
+  align-items: center;
+  padding: 0 15px;
 }
