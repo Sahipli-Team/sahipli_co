@@ -88,7 +88,7 @@ p {
   font-size: 0.8rem;  
   letter-spacing: 2px;  
   cursor: pointer;
-  width: 4rem;
+  width: 3rem;
   height: 2rem;
 }
 
@@ -99,12 +99,13 @@ p {
 .outline {
   background: transparent;
   color: rgba(0, 212, 255, 0.9);
-  border: 1px solid rgba(0, 212, 255, 0.6);
+  border: 1px solid rgba(0, 212, 255, 0.9);
   transition: all .3s ease;
   
 }
 
 .outline:hover{
+  background: #df2e37de;
   transform: scale(1.125);
   color: rgba(255, 255, 255, 0.9);
   border-color: rgba(255, 255, 255, 0.9);
@@ -112,14 +113,16 @@ p {
 }
 
 .fill {
-  background: rgba(0, 212, 255, 0.9);
+  background: transparent;
   color: rgba(255,255,255,0.95);
   filter: drop-shadow(0);
+  border: 1px solid rgba(0, 212, 255, 0.9);
   font-weight: bold;
   transition: all .3s ease; 
 }
 
 .fill:hover{
+  background: rgba(0, 212, 255, 0.9);
   transform: scale(1.125);  
   border-color: rgba(255, 255, 255, 0.9);
   filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
