@@ -38,11 +38,18 @@ const AddProduct = () => {
     }
   }, [click]);
 
-  function handleClick() {
+  function handleClick(e) {
+    setTitle("");
+    setDescription("");
+    setPrice("");
+    setCategory("");
+    setImage("");
+    e.preventDefault()
     setClick(!click);
     console.log(click);
   }
 
+ 
   return (
     <div>
       <form
@@ -105,7 +112,7 @@ const AddProduct = () => {
         <div>
           <br />
           <button className="save_button">Save</button>
-          <button className="close_button">Close</button>
+          <button className="close_button" onClick={handleClick}>Close</button>
         </div>
       </form>
       <button onClick={handleClick}>Add Product</button>
