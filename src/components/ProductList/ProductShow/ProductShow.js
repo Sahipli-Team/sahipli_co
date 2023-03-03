@@ -28,7 +28,7 @@ const ProductShow = ({ product }) => {
         <p>Price: ${price}</p>
         <p>Advert Date: {date}</p>
       </div>
-      <p>Description: {description}</p>
+      <p className="desc">Description: {description}</p>
     </div>
   );
   if (showEdit) {
