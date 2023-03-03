@@ -21,14 +21,23 @@ const ProductShow = ({ product }) => {
 
   let content = (
     <div className="wrapper">
-      <p>Category: {category}</p>
-      <p>Title: {title}</p>
+      <p>
+        <h3 className="title_style">Category:</h3> <span>{category}</span>
+      </p>
+      <p>
+        <h3 className="title_style">Title:</h3> <span>{title}</span>
+      </p>
       <img className="banner-image" src={image} alt={title} />
       <div>
-        <p>Price: ${price}</p>
-        <p>Advert Date: {date}</p>
+        <p>
+          <h3 className="title_style"> Price: </h3> <span>${price}</span>
+        </p>
+        <p>
+          <h3 className="title_style">Advert Date:</h3> <span>{date}</span>
+        </p>
       </div>
-      <p className="desc">Description: {description}</p>
+      <h3 className="title_style">Description:</h3>
+      <p className="desc"> {description}</p>
     </div>
   );
   if (showEdit) {
