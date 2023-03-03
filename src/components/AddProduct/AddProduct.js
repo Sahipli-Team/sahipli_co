@@ -116,7 +116,7 @@ const AddProduct = () => {
           <button className="close_button" onClick={handleClick}>Close</button>
         </div>
       </form>
-      <button className="addProduct" onClick={handleClick}><img src={addButton} alt="add button" />ADD</button>
+      <button className="addProduct" onClick={handleClick}><img src={addButton} alt="add button" />SELL</button>
     </div>
   );
 };
