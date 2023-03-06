@@ -433,3 +433,17 @@ textarea:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
+
+.form-edit label {
+  color: whitesmoke;
+  font-weight: 400;
+}
+
+.form-edit label input {
+  border-radius: 4%;
+  background-color: #ffffffcc;
+}
+
+.form-edit label input:hover {
+  border-color: rgba(0, 212, 255, 0.9);
+}
