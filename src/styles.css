@@ -21,7 +21,6 @@ body {
   height: 4rem;
 }
 
-
 .header img {
   width: 10.5rem;
   height: 4rem;
@@ -289,7 +288,7 @@ textarea:hover {
   border-color: whitesmoke;
 }
 
-.addProduct{
+.addProduct {
   background-color: transparent;
   border-radius: 14%;
   font-weight: bold;
@@ -300,7 +299,7 @@ textarea:hover {
   right: 3rem;
   bottom: 2.5rem;
   padding: 0.4rem;
-  border-color:  rgba(0, 212, 255, 0.9);
+  border-color: rgba(0, 212, 255, 0.9);
 }
 
 .addProduct:hover {
@@ -315,3 +314,22 @@ textarea:hover {
   height: 3rem;
 }
 
+.form-edit {
+  font-weight: bold;
+  font-size: 1rem;
+  flex-direction: column;
+  display: flex;
+  padding: 1rem;
+}
+
+.edit-label {
+  padding: 0.8rem;
+  text-align: left;
+  left: 5rem;
+}
+
+.form-edit label input {
+  position: absolute;
+  right: 4rem;
+  padding: 0.2rem;
+}
