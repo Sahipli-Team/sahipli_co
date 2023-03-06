@@ -23,8 +23,8 @@ const ProductEdit = ({ product, onSubmit }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form onSubmit={handleSubmit} className="form-edit">
+      <label className="edit-label">
         Category:
         <input
           type="text"
@@ -32,7 +32,7 @@ const ProductEdit = ({ product, onSubmit }) => {
           onChange={(e) => setCategory(e.target.value)}
         />
       </label>
-      <label>
+      <label className="edit-label">
         Title:
         <input
           type="text"
@@ -40,7 +40,7 @@ const ProductEdit = ({ product, onSubmit }) => {
           onChange={(e) => setTitle(e.target.value)}
         />
       </label>
-      <label>
+      <label className="edit-label">
         Image URL:
         <input
           type="text"
@@ -48,7 +48,7 @@ const ProductEdit = ({ product, onSubmit }) => {
           onChange={(e) => setImage(e.target.value)}
         />
       </label>
-      <label>
+      <label className="edit-label">
         Price:
         <input
           type="text"
@@ -56,7 +56,7 @@ const ProductEdit = ({ product, onSubmit }) => {
           onChange={(e) => setPrice(e.target.value)}
         />
       </label>
-      <label>
+      <label className="edit-label">
         Description
         <input
           type="text"
