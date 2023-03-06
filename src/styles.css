@@ -394,7 +394,7 @@ textarea:hover {
   transition: all 0.5s ease-in-out;
   background-color: rgba(0, 212, 255, 0.9);
   padding-right: 40px;
-  color: #ffc;
+  color: #fff;
 }
 .input-search::placeholder {
   color: rgba(255, 255, 255, 0.5);
