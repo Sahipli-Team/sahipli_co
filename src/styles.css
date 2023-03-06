@@ -1,4 +1,4 @@
-@import url();
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -380,6 +380,7 @@ textarea:hover {
   width: fit-content;
   height: fit-content;
   position: relative;
+  margin-right: 11rem;
 }
 .input-search{
   height: 50px;
@@ -391,7 +392,7 @@ textarea:hover {
   outline: none;
   border-radius: 25px;
   transition: all .5s ease-in-out;
-  background-color: transparent;
+  background-color: rgba(0, 212, 255, 0.9);
   padding-right: 40px;
   color:#fff;
 }
