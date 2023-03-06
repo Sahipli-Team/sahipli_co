@@ -57,7 +57,7 @@ const ProductEdit = ({ product, onSubmit }) => {
         />
       </label>
       <label>
-        Description
+        Description:
         <textarea
           placeholder="Add Description"
           value={description}
