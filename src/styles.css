@@ -43,7 +43,6 @@ body {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: center;
   height: 40rem;
   width: 30rem;
@@ -320,16 +319,38 @@ textarea:hover {
   flex-direction: column;
   display: flex;
   padding: 1rem;
+  width: 100%;
+  height: 80%;
+  display: inline-flex;
 }
 
-.edit-label {
+.form-edit label {
   padding: 0.8rem;
   text-align: left;
-  left: 5rem;
+  left: 6rem;
 }
 
 .form-edit label input {
   position: absolute;
-  right: 4rem;
+  right: 5rem;
   padding: 0.2rem;
+  width: 13rem;
+}
+
+.edit-button {
+  bottom: 1rem;
+  position: relative;
+  top: 1.8rem;
+}
+
+.edit-textArea {
+  background-color: #ffffffcc;
+  color: black;
+  border-radius: 3%;
+  text-align: "left";
+  position: relative;
+  width: 100%;
+  height: 10rem;
+  margin-top: 1rem;
+  border: 2px solid whitesmoke;
 }
