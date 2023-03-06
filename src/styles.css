@@ -376,13 +376,13 @@ textarea:hover {
   border: 2px solid whitesmoke;
 }
 
-.search-box{
+.search-box {
   width: fit-content;
   height: fit-content;
   position: relative;
   margin-right: 3rem;
 }
-.input-search{
+.input-search {
   height: 50px;
   width: 50px;
   border-style: none;
@@ -391,19 +391,19 @@ textarea:hover {
   letter-spacing: 2px;
   outline: none;
   border-radius: 25px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background-color: rgba(0, 212, 255, 0.9);
   padding-right: 40px;
-  color:#fff;
+  color: #ffc;
 }
-.input-search::placeholder{
-  color:rgba(255,255,255,.5);
+.input-search::placeholder {
+  color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 100;
 }
 
-.btn-search{
+.btn-search {
   width: 50px;
   height: 50px;
   border-style: none;
@@ -414,26 +414,23 @@ textarea:hover {
   border-radius: 50%;
   position: absolute;
   right: 0px;
-  color: #050a3faf ;
-  background-color:transparent;
-  pointer-events: painted;  
+  color: #050a3faf;
+  background-color: transparent;
+  pointer-events: painted;
 }
 
-.btn-search:focus ~ .input-search{
+.btn-search:focus ~ .input-search {
   width: 300px;
   border-radius: 0px;
   background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
 
-.input-search:focus{
+.input-search:focus {
   width: 300px;
   border-radius: 0px;
   background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
-
-
-
