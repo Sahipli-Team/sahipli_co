@@ -1,15 +1,27 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
 const ProductContext = createContext();
 
 function Provider({ children }) {
-  const [products, setProducts] = useState([]);
+  const [data, setData] = useState([]);
+  const [products, setProducts] = useState(data);
+  const [search, setSearch] = useState();
 
   const fetchProducts = async () => {
     const response = await axios.get("http://localhost:3001/products");
-    setProducts(response.data);
+    setData(response.data);
+    console.log(data);
+    setProducts(data);
   };
+
+  useEffect(() => {
+    let newData = data.filter((item) =>
+      item.title.toLowerCase().includes(search.toLowerCase().trim())
+    );
+    console.log(newData);
+    setProducts(newData);
+  }, [search]);
 
   const editProductById = async (
     id,
@@ -71,6 +83,7 @@ function Provider({ children }) {
     createProduct,
     deleteProductById,
     editProductById,
+    setSearch,
   };
   return (
     <ProductContext.Provider value={valueToShare}>
