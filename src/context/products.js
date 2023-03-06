@@ -6,12 +6,12 @@ const ProductContext = createContext();
 function Provider({ children }) {
   const [data, setData] = useState([]);
   const [products, setProducts] = useState(data);
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
 
   const fetchProducts = async () => {
     const response = await axios.get("http://localhost:3001/products");
     setData(response.data);
-    console.log(data);
+    console.log(response.data);
     setProducts(data);
   };
 
@@ -19,9 +19,8 @@ function Provider({ children }) {
     let newData = data.filter((item) =>
       item.title.toLowerCase().includes(search.toLowerCase().trim())
     );
-    console.log(newData);
     setProducts(newData);
-  }, [search]);
+  }, [search, data]);
 
   const editProductById = async (
     id,
