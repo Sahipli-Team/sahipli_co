@@ -7,10 +7,14 @@ const Header = () => {
   return (
     <div className="header">
       <img src={Image} alt="S title" />
-      <input
-        placeholder="Search..."
-        onChange={(e) => setSearch(e.target.value)}
-      ></input>
+      <form action="" autocomplete="on">
+        <input
+          className="search"
+          placeholder="Search product..."
+          onChange={(e) => setSearch(e.target.value)}
+        ></input>
+        <input type="submit" className="search_submit" />
+      </form>
     </div>
   );
 };
