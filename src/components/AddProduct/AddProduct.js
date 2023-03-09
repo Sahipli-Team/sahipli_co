@@ -1,56 +1,63 @@
 import { useEffect, useState, useContext } from "react";
 import ProductContext from "../../context/products";
-import addButton from "../../Image/add-product.png"
+import addButton from "../../Image/add-product.png";
 
 const AddProduct = () => {
+  //context's create method called at this line
   const { createProduct } = useContext(ProductContext);
+  //useState's used for storing and setting new datas for the variables
   const [title, setTitle] = useState();
   const [date, setDate] = useState();
   const [description, setDescription] = useState();
   const [price, setPrice] = useState();
   const [category, setCategory] = useState();
   const [image, setImage] = useState();
+  // click will save the status of the mouse click which will render the page eveytime it changed with useEffect method
   const [click, setClick] = useState(false);
+  // vis will save the status of the display's type. It'll be none or block according to the click's status
   const [vis, setVis] = useState("none");
-
+  // when save button clicked, a new card will be saved and store in to db.json.
   const handleSubmit = (e) => {
     e.preventDefault();
+    // It'll automatically save the date which the new product saved.
     const today = new Date();
     const todayDate = `${today.getDate()}/${
       today.getMonth() + 1
     }/${today.getFullYear()}`;
     setDate(todayDate);
+    //It'll restore the mouse click status to false
     setClick(false);
+    //Card's input datas and also the date data which is automatically created, will be sent here to the useContext's createProduct method.
     createProduct(date, title, category, price, description, image);
+    //After the save process, it'll clear the user input interfaces.
     setTitle("");
     setDescription("");
     setPrice("");
     setCategory("");
     setImage("");
   };
-
+  // It will render the page eveytime when "click" changed,
+  //block will set to save screen to be seen
+  //none will set to save screen to be hidden
   useEffect(() => {
     if (click) {
       setVis("block");
-      console.log("block");
     } else {
       setVis("none");
-      console.log("none");
     }
   }, [click]);
 
+  // It's the function of the close button
   function handleClick(e) {
     setTitle("");
     setDescription("");
     setPrice("");
     setCategory("");
     setImage("");
-    e.preventDefault()
+    e.preventDefault();
     setClick(!click);
-    console.log(click);
   }
-
- 
+  //html format of the addScreen
   return (
     <div>
       <form
@@ -113,11 +120,17 @@ const AddProduct = () => {
         <div>
           <br />
           <button className="save_button">Save</button>
-          <button className="close_button" onClick={handleClick}>Close</button>
+          <button className="close_button" onClick={handleClick}>
+            Close
+          </button>
         </div>
       </form>
-      <button className="addProduct" onClick={handleClick}><img src={addButton} alt="add button" />SELL</button>
+      <button className="addProduct" onClick={handleClick}>
+        <img src={addButton} alt="add button" />
+        SELL
+      </button>
     </div>
   );
 };
+//AddProduct exported here
 export default AddProduct;
