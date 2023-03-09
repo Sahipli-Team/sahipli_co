@@ -7,21 +7,21 @@ function Provider({ children }) {
   const [data, setData] = useState([]);
   const [products, setProducts] = useState(data);
   const [search, setSearch] = useState("");
-
+  //products fetched from data base
   const fetchProducts = async () => {
     const response = await axios.get("http://localhost:3001/products");
     setData(response.data);
     console.log(response.data);
     setProducts(data);
   };
-
+  //It'll filter the data fetched from db according to the input value, each time search and data values changed
   useEffect(() => {
     let newData = data.filter((item) =>
       item.title.toLowerCase().includes(search.toLowerCase().trim())
     );
     setProducts(newData);
   }, [search, data]);
-
+  //editProduct will set the new values which are taken from the user and update the db
   const editProductById = async (
     id,
     date,
@@ -47,7 +47,7 @@ function Provider({ children }) {
     });
     setProducts(updatedProducts);
   };
-
+  //createProduct will save a new product to the db according to the user input values
   const createProduct = async (
     date,
     title,
@@ -67,7 +67,7 @@ function Provider({ children }) {
     const updatedProducts = [...products, response.data];
     setProducts(updatedProducts);
   };
-
+  //deleteProductById will delete the chosen product according to the product's id
   const deleteProductById = async (id) => {
     await axios.delete(`http://localhost:3001/products/${id}`);
     const updatedProducts = products.filter((product) => {
@@ -75,7 +75,7 @@ function Provider({ children }) {
     });
     setProducts(updatedProducts);
   };
-
+  //those are the list of methods and variables can be used with useContext
   const valueToShare = {
     products,
     fetchProducts,
@@ -84,12 +84,14 @@ function Provider({ children }) {
     editProductById,
     setSearch,
   };
+  //It defines that all the children subcomponents of Provider can use valueToShare
   return (
     <ProductContext.Provider value={valueToShare}>
       {children}
     </ProductContext.Provider>
   );
 }
-
+//Provider exported
 export { Provider };
+//ProductContext exported
 export default ProductContext;
