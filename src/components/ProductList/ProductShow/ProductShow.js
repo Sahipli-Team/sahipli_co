@@ -5,20 +5,25 @@ import DeleteImageButton from "../../../Image/deleteImage.png";
 import EditImageButton from "../../../Image/EditImage.png";
 
 const ProductShow = ({ product }) => {
+  //products' properties parsed
   const { title, category, price, image, description, date } = product;
+  //showEdit's status defined
   const [showEdit, setShowEdit] = useState(false);
+  //context's delete function pulled here to be used
   const { deleteProductById } = useContext(ProductContext);
-
+  //It'll set the visibility of edit card
   const handleEditClick = () => {
     setShowEdit((p) => !p);
   };
+  //It'll  change the content back to the normal card structure when it's saved
   const handleSubmit = () => {
     setShowEdit(false);
   };
+  //delete product according to the product id
   const handleDeleteClick = () => {
     deleteProductById(product.id);
   };
-
+  //product card will be created according to the related product's specs.
   let content = (
     <div className="wrapper">
       <p>
@@ -36,16 +41,17 @@ const ProductShow = ({ product }) => {
           <h3 className="title_style">Advert Date:</h3> <span>{date}</span>
         </p>
       </div>
-
       <p className="desc">
         <h3 className="title_style">Description: </h3> <br />
         {description}
       </p>
     </div>
   );
+  // It'll change the card's image to the edit format according to ProductEdit component
   if (showEdit) {
     content = <ProductEdit onSubmit={handleSubmit} product={product} />;
   }
+  //html format of each card will be created through db
   return (
     <div className="container">
       <div className="button-wrapper">
