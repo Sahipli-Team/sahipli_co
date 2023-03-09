@@ -1,13 +1,14 @@
 import { useState, useContext } from "react";
 import ProductContext from "../../../../context/products";
 const ProductEdit = ({ product, onSubmit }) => {
+  //context's edit function pulled here
   const { editProductById } = useContext(ProductContext);
+  //product's properties and set methods parsed here from context
   const [title, setTitle] = useState(product.title);
   const [description, setDescription] = useState(product.description);
   const [price, setPrice] = useState(product.price);
   const [category, setCategory] = useState(product.category);
   const [image, setImage] = useState(product.image);
-
   function handleSubmit(e) {
     e.preventDefault();
     onSubmit();
@@ -21,7 +22,7 @@ const ProductEdit = ({ product, onSubmit }) => {
       image
     );
   }
-
+  //html format of Edit Card
   return (
     <form onSubmit={handleSubmit} className="form-edit">
       <label>
@@ -70,4 +71,5 @@ const ProductEdit = ({ product, onSubmit }) => {
     </form>
   );
 };
+//ProductEdit exported here
 export default ProductEdit;
