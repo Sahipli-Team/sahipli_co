@@ -9,8 +9,9 @@ import { useContext } from "react";
   referrerpolicy="no-referrer"
 />;
 const Header = () => {
+  //useContext's searchbar method pulled here to be use
   const { setSearch } = useContext(ProductContext);
-
+  //html format of the header component
   return (
     <div className="header">
       <img src={Image} alt="S title" />
@@ -27,4 +28,5 @@ const Header = () => {
     </div>
   );
 };
+//Header component exported here
 export default Header;
