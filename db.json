@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "date": "3/3/2023",
+      "title": "Sahibinden araba",
+      "category": "Araba",
+      "price": "1000000",
+      "description": "Mercedes C serisi ikinci el araba, 10000km'de 2022 model. 1. sahibinden satılık garaj arabasıdır.",
+      "image": "https://images-ext-1.discordapp.net/external/_bNUyDQgJJ1EKnbkmlvj1kjcr2H_IKZP4pg5ZAZtyzw/https/www.topgear.com/sites/default/files/2021/11/Mercedes_C300D_0000.jpg?width=2120&height=1193",
+      "id": 2
+    },
+    {
+      "date": "3/3/2023",
+      "title": "Sahibinden Ev",
+      "category": "Ev",
+      "price": "600000000",
+      "description": "İzmir, Çeşme'de satılık havuzlu villa \n2005 senesinde yapılmıs. Fiyat pazarlığa tabi degildir.",
+      "image": "https://images-ext-2.discordapp.net/external/Du7mHyh6MI5SYz0hQeVMIhbLOzCsawzVFbkp8Ckg8Sw/https/i.ytimg.com/vi/KLwsKK8qfi0/maxresdefault.jpg",
+      "id": 3
+    },
+    {
+      "title": "Yemek Odası Takımı",
+      "category": "Ev Eşyası",
+      "price": "2500",
+      "description": "Satılık, masif agactan yapılma yemek odası takımı tek masa ve sandalyelerden oluşan setten oluşmaktadır.",
+      "image": "https://i0.shbdn.com/photos/43/71/49/x5_1064437149pgh.jpg",
+      "id": 4
+    },
+    {
+      "date": "8/3/2023",
+      "title": "Scooter",
+      "category": "Scooter",
+      "price": "500",
+      "description": "Elektrikli Scooter, sadece 1 ay kullanıldı. Çizikleri mevcut pazarlık için konuşulabilir.",
+      "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRnkdR1waTDlhOaHUqu5FpV2o43iBcVjonl9qlYyh5r25HEoMmCL1uxtc-eSqn_ZqsPclRC8jykrEjidItznYcBgd-ztdlAOB7j3YuR6610YGPS0bLIR8Qz&usqp=CAE",
+      "id": 5
+    }
+  ]
+}
