@@ -3,11 +3,15 @@ import ProductContext from "../../context/products";
 import addButton from "../../Image/add-product.png";
 
 const AddProduct = () => {
+  // It'll automatically save the date which the new product saved.
+  const today = new Date();
   //context's create method called at this line
   const { createProduct } = useContext(ProductContext);
   //useState's used for storing and setting new datas for the variables
   const [title, setTitle] = useState();
-  const [date, setDate] = useState();
+  const [date, setDate] = useState(
+    `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`
+  );
   const [description, setDescription] = useState();
   const [price, setPrice] = useState();
   const [category, setCategory] = useState();
@@ -19,12 +23,6 @@ const AddProduct = () => {
   // when save button clicked, a new card will be saved and store in to db.json.
   const handleSubmit = (e) => {
     e.preventDefault();
-    // It'll automatically save the date which the new product saved.
-    const today = new Date();
-    const todayDate = `${today.getDate()}/${
-      today.getMonth() + 1
-    }/${today.getFullYear()}`;
-    setDate(todayDate);
     //It'll restore the mouse click status to false
     setClick(false);
     //Card's input datas and also the date data which is automatically created, will be sent here to the useContext's createProduct method.
